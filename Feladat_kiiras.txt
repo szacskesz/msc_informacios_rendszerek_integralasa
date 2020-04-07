@@ -1,0 +1,9 @@
+Készítsen REST API-t django frameworkben, amely egy videokölcsönző adatbázisát használja.
+Készítsen egy angularJS klienst, amely filmeket tud hozzáadni az adatbázishoz.
+Készítsen, a kölcsönzéshez használható funkciót, amely a filmeket kikölcsönzött,
+illetve visszavitt státuszra állítja.
+Listázza a kikölcsönzött és kölcsönözhető filmeket.
+
+Módosítások:
+	- AngularJS helyet Angular 9 használata
+	- Django framework + Python helyett Spring framework + Java használata.
