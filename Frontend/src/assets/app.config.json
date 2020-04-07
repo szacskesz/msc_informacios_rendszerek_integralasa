@@ -1,0 +1,58 @@
+{
+    "endpoints": [
+        {
+            "name": "baseUrl",
+            "url": "http://localhost:8080/video/"
+        },
+        {
+            "name": "create-video",
+            "url": "create/",
+            "method": "POST"
+        },
+        {
+            "name": "update-video",
+            "url": "update/",
+            "method": "POST"
+        },
+        {
+            "name": "rent-video",
+            "url": "rent/",
+            "method": "GET"
+        },
+        {
+            "name": "return-video",
+            "url": "return/",
+            "method": "GET"
+        },
+        {
+            "name": "discard-video",
+            "url": "discard/",
+            "method": "GET"
+        },
+        {
+            "name": "get-video",
+            "url": "get/",
+            "method": "GET"
+        },
+        {
+            "name": "get-all-video",
+            "url": "getAll/",
+            "method": "GET"
+        },
+        {
+            "name": "get-all-available-video",
+            "url": "getAllAvailable/",
+            "method": "GET"
+        },
+        {
+            "name": "get-all-rented-video",
+            "url": "getAllRented/",
+            "method": "GET"
+        },
+        {
+            "name": "get-all-discarded-video",
+            "url": "getAllDiscarded/",
+            "method": "GET"
+        }
+    ]
+}

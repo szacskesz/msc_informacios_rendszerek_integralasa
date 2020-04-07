@@ -1,0 +1,62 @@
+<h1 class="mat-h1">Create new video</h1>
+<form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-content>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Serial number" formControlName="serial">
+            <mat-error *ngIf="form.controls['serial'].hasError('required')">
+              Serial number is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="form.controls['serial'].hasError('maxlength')">
+              Serial number is <strong>too long</strong>
+              (maximum {{form.controls['serial'].errors['maxlength'].requiredLength}} character(s) allowed)
+            </mat-error>
+            <mat-error *ngIf="form.controls['serial'].hasError('minlength')">
+              Serial number is <strong>too short</strong>
+              (minimum {{form.controls['serial'].errors['minlength'].requiredLength}} character(s) needed)
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Title" formControlName="title">
+            <mat-error *ngIf="form.controls['title'].hasError('required')">
+              Title is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="form.controls['title'].hasError('maxlength')">
+              Title is <strong>too long</strong>
+              (maximum {{form.controls['title'].errors['maxlength'].requiredLength}} character(s) allowed)
+            </mat-error>
+            <mat-error *ngIf="form.controls['title'].hasError('minlength')">
+              Title is <strong>too short</strong>
+              (minimum {{form.controls['title'].errors['minlength'].requiredLength}} character(s) needed)
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Choose an acquisition date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName='acquisitionDate'>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="form.controls['acquisitionDate'].hasError('required')">
+              Acquisition date is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
